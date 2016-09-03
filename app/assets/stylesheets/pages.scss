@@ -1,3 +1,44 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.bg-img2 {
+	width: 650px;
+	height: 250px;
+	opacity: .5;
+	padding-right: 10px;
+}
+.hotel-admin-overlay {
+	position: relative;
+	background-color: rgba(0,0,255,.1);
+	height: 303px;
+	h2 {
+		color: gray;
+		font-weight: lighter;
+	}
+	&:hover {
+		background-color: rgba(0,0,255,.3);
+	};
+}
+.bg-img3 {
+	width: 650px;
+	height: 303px;
+	opacity: .5;
+	padding-left: 10px;
+}
+.inventory-overlay {
+	position: relative;
+	height: 303px;
+	background-color: rgba(0,0,255,.1);
+	&:hover {
+		background-color: rgba(0,0,255,.3);
+	};
+}
+.get-app {
+	position: absolute;
+	top:45%;
+	left:45%;
+	color:purple;
+}
+.get-app2 {
+	position: absolute;
+	top:45%;
+	left:45%;
+	color:purple;
+}

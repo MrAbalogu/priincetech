@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+      <div class="row">
+      <h1>Quotes</h1>
 
-<h1>Quotes</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Content</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <tbody>
+          <% @quotes.each do |quote| %>
+            <tr>
+              <td><%= quote.name %></td>
+              <td><%= quote.content %></td>
+              <td><%= link_to 'Show', quote %></td>
+              <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+              <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-  <tbody>
-    <% @quotes.each do |quote| %>
-      <tr>
-        <td><%= quote.name %></td>
-        <td><%= quote.content %></td>
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <br>
 
-<br>
-
-<%= link_to 'New Quote', new_quote_path %>
+      <%= link_to 'New Quote', new_quote_path %>
+</div></div>
